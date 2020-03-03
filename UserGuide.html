@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 3 - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Calgo - User Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="index.html">Calgo</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AY1920S2-CS2103T-F11-1/main</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F11-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 3 - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="index.html">Calgo</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AY1920S2-CS2103T-F11-1/main</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F11-1/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Calgo - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team F11-1</code>      Since: <code>March 2020</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -15,14 +15,15 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.9. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.3. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></li>
+<li><a href="#exporting-the-current-food-record-export">3.4. Exporting the current Food Record : 'export'</a></li>
+<li><a href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></li>
+<li><a href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.6. Getting Food items by keywords or Food item values: <code>find</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.10. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.11. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -34,7 +35,17 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 3 (AB3) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB3 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Calgo is an <strong>all-in-one calorie tracker</strong> with deliverable insights to ensure that you are always one step ahead in your fitness goals.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For the modern day user who prefers to use a <strong>desktop application</strong>, Calgo&#8217;s <strong>Command Line Interface (CLI)</strong> works seamlessly with its <strong>Graphical User Interface (GUI)</strong> to provide fast and accurate usage while presenting results with visual depth and clarity.</p>
+</li>
+<li>
+<p>Fast typists would therefore greatly benefit from not only the speed of processing their input via the CLI but also the input correction methods of Calgo.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -65,26 +76,26 @@
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 <li>
-<p>Some example commands you can try:</p>
+<p>You can try experimenting to see the results for yourself! Some example commands:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>list</code></strong> : lists all Food items currently recorded in the Food Records.</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>add</code></strong><code>n/kiwi cal/125 p/1 c/20 f/3</code> : adds a Food named <code>kiwi</code> to the Food Records with its details saved as: 125 calories, 1 gram of protein, 20 grams of carbohydrates, and 3 grams of fats.</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>find</code></strong><code>banana</code> : finds the entry banana in the Food Records and returns its details if available; otherwise an error message will be shown.</p>
 </li>
 <li>
-<p><strong><code>exit</code></strong> : exits the app</p>
+<p><strong><code>exit</code></strong> : exits the Calgo application</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
+<p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> section below for details of each command.</p>
 </li>
 </ol>
 </div>
@@ -101,16 +112,16 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/kiwi</code>.</p>
 </li>
 <li>
-<p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.</p>
+<p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/kiwi t/favourite fruit</code> or as <code>n/kiwi</code>.</p>
 </li>
 <li>
-<p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.</p>
+<p>Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be left empty, or used as <code>t/favourite</code>, <code>t/favourite t/green</code> etc.</p>
 </li>
 <li>
-<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PHONE_NUMBER</code>, <code>p/PHONE_NUMBER n/NAME</code> is also acceptable.</p>
+<p>Parameters can be in any order e.g. if the command specifies <code>n/NAME p/PROTEINS</code>, <code>p/PROTEINS n/NAME</code> is also acceptable.</p>
 </li>
 </ul>
 </div>
@@ -155,14 +166,21 @@ A person can have any number of tags (including 0)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="listing-all-food-items-in-calgo-s-current-food-record-code-list-code"><a class="link" href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.3. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
+<p>Shows a list of all Food items in the Food Records, with their respective nutritional values of Calories, Proteins, Carbohydrates, and Fats.<br>
 Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="exporting-the-current-food-record-export"><a class="link" href="#exporting-the-current-food-record-export">3.4. Exporting the current Food Record : 'export'</a></h3>
+<div class="paragraph">
+<p>Provides a human-readable text file (FoodRecords.txt) in the same folder as the Calgo application, containing all Food item records including name, calories, and nutritional values.
+Format: <code>export</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
@@ -207,29 +225,40 @@ Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="getting-food-items-by-keywords-or-food-item-values-code-find-code"><a class="link" href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.6. Getting Food items by keywords or Food item values: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
+<p>Finds all Food items whose names contain any of the keyword(s), even as an incompletely-spelled word (e.g. by mistake).<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternatively, Food items can also be found by entering a specific value of its attributes, i.e. Calories, Proteins, Carbohydrates, or Fats.<br>
+Format: <code>find [cal/CALORIES] [p/PROTEINS] [c/CARBS] [f/FATS]</code></p>
+</li>
+<li>
+<p>Otherwise, an error message will be shown.</p>
+</li>
+</ul>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+<p>The search is case insensitive. e.g <code>Kiwi</code> will match <code>kiwi</code></p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+<p>The order of the keywords does not matter. e.g. <code>Grilled Cheeseburger</code> will match <code>Cheeseburger Grilled</code></p>
 </li>
 <li>
-<p>Only the name is searched.</p>
+<p>Incompletely-spelled words will be matched to all Food items containing the incompletely-spelled word. e.g. <code>Kiw</code> will match <code>Kiwi</code></p>
 </li>
 <li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
+<p>Food items matching at least one keyword (even if it is spelt incomplete) will be returned (i.e. <code>OR</code> search). e.g. <code>Ki Juice</code> results can include <code>Kiwi Ice Cream</code>, <code>Orange Juice</code>, <code>Kiki Brand Lemonade</code></p>
 </li>
 <li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Finding by specific Food attribute values would filter out all matching Food items satisfying the criteria. e.g. <code>cal/90 c/10</code> results can include <code>KG Biscuit</code>, <code>Apple Slices</code> which have 90 calories and 10 grams of carbohydrates.</p>
 </li>
 </ul>
 </div>
@@ -241,18 +270,22 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
+<p><code>find wI</code><br>
+Returns <code>kiwi</code> and <code>kiwi juice</code></p>
 </li>
 <li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+<p><code>find `cal/100 p/25</code><br>
+Returns <code>chocolate protein powder shake</code> and <code>ON protein milkshake</code> which have 100 calories and 25 grams of protein</p>
+</li>
+<li>
+<p><code>find</code><br>
+Returns an error message</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code></p>
@@ -293,28 +326,28 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.9. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.10. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.11. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -351,11 +384,15 @@ e.g. <code>delete 3</code></p>
 e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code> <strong>OR</strong> <code>find [cal/CALORIES] [p/PROTEINS] [c/CARBS] [f/FATS]</code><br>
+e.g. <code>find strawberr jam</code> <strong>OR</strong><br>
+<code>find cal/100 f/10</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list</code></p>
+</li>
+<li>
+<p><strong>Export</strong> : <code>export</code></p>
 </li>
 <li>
 <p><strong>Help</strong> : <code>help</code></p>
@@ -363,4 +400,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-03 15:26:32 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-03 18:09:41 UTC</div></div></div></body></html>
