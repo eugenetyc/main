@@ -13,15 +13,19 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.3. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></li>
-<li><a href="#exporting-the-current-food-record-export">3.4. Exporting the current Food Record : 'export'</a></li>
-<li><a href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></li>
-<li><a href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.6. Getting Food items by keywords or Food item values: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></li>
+<li><a href="#displaying-help-code-help-code">3.1. Displaying help : <code>help</code></a></li>
+<li><a href="#updating-the-current-food-record-code-update-code">3.2. Updating the current Food Record : <code>update</code></a></li>
+<li><a href="#deleting-a-food-item-from-current-food-record-code-delete-code">3.3. Deleting a Food Item from current Food Record: <code>delete</code></a></li>
+<li><a href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.4. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></li>
+<li><a href="#showing-all-food-items-consumed-on-a-particular-day-code-stomach-code">3.5. Showing all food items consumed on a particular day : <code>stomach</code></a></li>
+<li><a href="#consuming-food-on-a-certain-day-code-nom-code">3.6. Consuming food on a certain day : <code>nom</code></a></li>
+<li><a href="#deleting-something-consumed-on-a-certain-day-code-vomit-code">3.7. Deleting something consumed on a certain day : <code>vomit</code></a></li>
+<li><a href="#exporting-the-current-food-record-code-export-code">3.8. Exporting the current Food Record : <code>export</code></a></li>
+<li><a href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.9. Getting Food items by keywords or Food item values : <code>find</code></a></li>
+<li><a href="#setting-a-dietary-goal-code-goal-code">3.10. Setting a dietary goal: <code>goal</code></a></li>
+<li><a href="#generating-insights-code-report-code">3.11. Generating insights : <code>report</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.12. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.13. Exiting the program : <code>exit</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -56,10 +60,10 @@
 <p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/AY1920S2-CS2103T-F11-1/main/releases">here</a>.</p>
+<p>Download the latest <code>calgo.jar</code> <a href="https://github.com/AY1920S2-CS2103T-F11-1/main/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your Calgo application.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -81,7 +85,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>list</code></strong> : lists all Food items currently recorded in the Food Records.</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/kiwi cal/125 p/1 c/20 f/3</code> : adds a Food named <code>kiwi</code> to the Food Records with its details saved as: 125 calories, 1 gram of protein, 20 grams of carbohydrates, and 3 grams of fats.</p>
+<p><strong><code>update</strong>n/kiwi cal/125 p/1 c/20 f/3</code> : adds <code>kiwi</code> to the Food Records if there is currently no Food called 'kiwi' inside it, with its details saved as: 125 calories, 1 gram of protein, 20 grams of carbohydrates, and 3 grams of fats.</p>
 </li>
 <li>
 <p><strong><code>find</code></strong><code>banana</code> : finds the entry banana in the Food Records and returns its details if available; otherwise an error message will be shown.</p>
@@ -126,16 +130,79 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="displaying-help-code-help-code"><a class="link" href="#displaying-help-code-help-code">3.1. Displaying help : <code>help</code></a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Displays a guide for all available commands in Calgo.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>This will display all available commands, in alphabetical order</p>
+</li>
+<li>
+<p>If only a specific command is wanted, <code>help</code> can used with a keyword.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Format: <code>help [KEYWORD]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>help</code><br>
+This command will display all available commands, along with their associated command format and a brief description of the command&#8217;s purpose.</p>
+</li>
+<li>
+<p><code>help list</code><br>
+This command will display only available commands containing the keyword 'list'.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="updating-the-current-food-record-code-update-code"><a class="link" href="#updating-the-current-food-record-code-update-code">3.2. Updating the current Food Record : <code>update</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
+<p>Updates a Food Item in the Food Record.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If Food Item is not present in the Food Record, this will create a new Food Item with all the nutritional details specified</p>
+</li>
+<li>
+<p>If Food Item is already present in the Food Record, this will override that Food Item with the nutritional details specified by user</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Format: <code>update n/NAME cal/CALORIES [p/PROTEINS] [c/CARBS] [f/FATS]</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>update n/pizza cal/200 p/10 c/200</code><br>
+This command adds a new food item, pizza into the user’s food presets with nutritional details of 200Cal calories, 10g of protein, 200g of carbohydrates.</p>
+</li>
+<li>
+<p><code>update n/pizza cal/100 p/10 c/100 f/30</code><br>
+As pizza is already in the user’s food preset, this command overrides the nutritional details of pizza with 200Cal calories, 10g of protein, 200g of carbohydrates and 20g of fats.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -144,10 +211,64 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;<
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-A person can have any number of tags (including 0)
+You can leave any of the proteins, carbohydrates or fats value of a food item blank when updating a Food Item into the Food Record.
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-food-item-from-current-food-record-code-delete-code"><a class="link" href="#deleting-a-food-item-from-current-food-record-code-delete-code">3.3. Deleting a Food Item from current Food Record: <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified Food Item from the Food Record.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>delete n/NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>delete n/pizza</code><br>
+Deletes pizza from the Food Record</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-food-items-in-calgo-s-current-food-record-code-list-code"><a class="link" href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.4. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of all Food items in the Food Records, with their respective nutritional values of calories, proteins, carbohydrates, and fats.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="showing-all-food-items-consumed-on-a-particular-day-code-stomach-code"><a class="link" href="#showing-all-food-items-consumed-on-a-particular-day-code-stomach-code">3.5. Showing all food items consumed on a particular day : <code>stomach</code></a></h3>
+<div class="paragraph">
+<p>Displays a list of food items along side how many portions have been consumed on that day.
+For a more detailed statistical report with nutritional values of food consumed, see <code>report</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>stomach [d/DATE]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If a date is not provided, Calgo will take it that the user wishes to see food consumed today.</p>
+</li>
+<li>
+<p><code>d/</code> prefix will still have to be present, but the user can choose not to provide any values.</p>
+</li>
+<li>
+<p>Date follows yyyy-mm-dd format.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -155,30 +276,131 @@ A person can have any number of tags (including 0)
 <div class="ulist">
 <ul>
 <li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
+<p><code>stomach d/2020-03-04</code>
+Displays a list of food user has consumed on 2020-03-04.</p>
 </li>
 <li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
+<p><code>stomach d/</code><br>
+Displays a list of food user has consumed today.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-food-items-in-calgo-s-current-food-record-code-list-code"><a class="link" href="#listing-all-food-items-in-calgo-s-current-food-record-code-list-code">3.3. Listing all Food items in Calgo&#8217;s current Food Record : <code>list</code></a></h3>
+<h3 id="consuming-food-on-a-certain-day-code-nom-code"><a class="link" href="#consuming-food-on-a-certain-day-code-nom-code">3.6. Consuming food on a certain day : <code>nom</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all Food items in the Food Records, with their respective nutritional values of Calories, Proteins, Carbohydrates, and Fats.<br>
-Format: <code>list</code></p>
+<p>Adds a food item into the log which keeps track of what the user has eaten on that day.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>nom [n/NAME] [d/DATE] [portion/PORTION]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If a date is not provided, Calgo will take it that the user ate the food today.</p>
+</li>
+<li>
+<p><code>d/</code> prefix will still have to be present, but the user can choose not to provide any values.</p>
+</li>
+<li>
+<p>Date follows yyyy-mm-dd format.</p>
+</li>
+<li>
+<p>User can check how much nutritional content each type of food content by checking the existing list of food.</p>
+</li>
+<li>
+<p>Ad-hoc consumption of food coming to you in v1.3 for flexibility should user be lazy to create a food items<br>
+which differs from existing ones/rarely eats. Also marked as ad-hoc since it does not exists in food record in case user
+have other plans in the future.</p>
+</li>
+<li>
+<p>In v1.3, food items tagged with mood values will be displayed separately.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>nom n/chicken d/2020-03-04 portion/1.5</code><br>
+Adds 1.5 portion of chicken to the log tracking user&#8217;s consumption on 4th March 2020.</p>
+</li>
+<li>
+<p><code>nom n/apple pie d/ portion/2</code><br>
+Adds 2 portion of apple pie to the log tracking user&#8217;s consumption today.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exporting-the-current-food-record-export"><a class="link" href="#exporting-the-current-food-record-export">3.4. Exporting the current Food Record : 'export'</a></h3>
+<h3 id="deleting-something-consumed-on-a-certain-day-code-vomit-code"><a class="link" href="#deleting-something-consumed-on-a-certain-day-code-vomit-code">3.7. Deleting something consumed on a certain day : <code>vomit</code></a></h3>
+<div class="paragraph">
+<p>Deletes a food item that a user has previously added to the log tracking consumption on that day.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>vomit [num/INDEX_OF_FOOD] [d/DATE] [portion/PORTION]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes a portion of food at the specified <code>INDEX_OF_FOOD</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the displayed consumption list.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong>: 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>If no portion is specified, the whole entry is deleted.</p>
+</li>
+<li>
+<p>If user specified a portion greater than what he has consumed, the entire entry will be deleted.</p>
+</li>
+<li>
+<p>If no date is specified, Calgo takes it as the date is today.</p>
+</li>
+<li>
+<p>Date follows yyyy-mm-dd format.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>stomach</code><br>
+<code>vomit num/2 d/ portion/</code><br>
+Deletes the second food consumed today in the consumption log displayed using <code>stomach</code> command.</p>
+</li>
+<li>
+<p><code>vomit num/1 d/2020-03-04 portion/3</code><br>
+Deletes 3 portions of of the first food item consumed on 2020-03-04.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exporting-the-current-food-record-code-export-code"><a class="link" href="#exporting-the-current-food-record-code-export-code">3.8. Exporting the current Food Record : <code>export</code></a></h3>
 <div class="paragraph">
 <p>Provides a human-readable text file (FoodRecords.txt) in the target folder (default: same folder as the Calgo application), containing all Food item records including name, calories, and nutritional values.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Address book data are saved in the application automatically after any command that changes the data. There is no need to save manually for this matter.<br></p>
+<p>Calgo data is saved in the application automatically after any command that changes the data. There is no need to save manually.<br></p>
 </li>
 <li>
 <p>However, to obtain a more readable form of this data, use the <code>export</code> command.</p>
@@ -186,59 +408,13 @@ Format: <code>list</code></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Format: <code>export</code> or <code>export location/LOCATION</code></p>
+<p>Format: <code>export [location/LOCATION]</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></h3>
+<h3 id="getting-food-items-by-keywords-or-food-item-values-code-find-code"><a class="link" href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.9. Getting Food items by keywords or Food item values : <code>find</code></a></h3>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-<li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
-</li>
-<li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
-</li>
-<li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="getting-food-items-by-keywords-or-food-item-values-code-find-code"><a class="link" href="#getting-food-items-by-keywords-or-food-item-values-code-find-code">3.6. Getting Food items by keywords or Food item values: <code>find</code></a></h3>
-<div class="paragraph">
-<p>Finds all Food items whose names contain any of the keyword(s), even as an incompletely-spelled word (e.g. by mistake).<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Finds all Food items whose names contain any of the keyword(s), even as an incompletely-spelled word (e.g. by mistake).</p>
 </div>
 <div class="ulist">
 <ul>
@@ -250,6 +426,9 @@ Format: <code>find [cal/CALORIES] [p/PROTEINS] [c/CARBS] [f/FATS]</code></p>
 <p>Otherwise, an error message will be shown.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -280,7 +459,7 @@ Format: <code>find [cal/CALORIES] [p/PROTEINS] [c/CARBS] [f/FATS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find wI</code><br>
+<p><code>find kiwi</code><br>
 Returns <code>kiwi</code> and <code>kiwi juice</code></p>
 </li>
 <li>
@@ -295,55 +474,97 @@ Returns an error message</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.7. Deleting a person : <code>delete</code></a></h3>
+<h3 id="setting-a-dietary-goal-code-goal-code"><a class="link" href="#setting-a-dietary-goal-code-goal-code">3.10. Setting a dietary goal: <code>goal</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
-Format: <code>delete INDEX</code></p>
+<p>Sets a numerical goal for the desired number of calories to be consumed in a day.<br></p>
+</div>
+<div class="paragraph">
+<p>This goal will be used to provide helpful insights for users in the Report.<br></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>goal [g/GOAL]</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>goal 2800</code><br>
+Sets the desired number of calories to be consumed to be 2800.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="generating-insights-code-report-code"><a class="link" href="#generating-insights-code-report-code">3.11. Generating insights : <code>report</code></a></h3>
+<div class="paragraph">
+<p>Given a date, the command generates a document (in pdf format) of relevant insights about the user&#8217;s food consumption pattern of the same date.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Deletes the person at the specified <code>INDEX</code>.</p>
+<p>The report includes the following insights:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All Food items consumed on the given date. For each Food item, the following information will be included:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Quantity consumed, for instance 3 servings.</p>
 </li>
 <li>
-<p>The index refers to the index number shown in the displayed person list.</p>
+<p>Number of calories consumed from the Food item.</p>
 </li>
 <li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Amount of carbohydrates, proteins and fats consumed from the Food item.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The user&#8217;s most liked Food item.</p>
+</li>
+<li>
+<p>The total number of calories consumed in that day.</p>
+</li>
+<li>
+<p>The total number of carbohydrates, proteins and fats consumed in that day.</p>
+</li>
+<li>
+<p>A curated Food plan that includes Food items, that includes a healthy quantity of the user&#8217;s favourite Food, while ensuring it meets user&#8217;s dietary goal.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
-</li>
-<li>
-<p><code>find Betsy</code><br>
-<code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+<p>report <code>27-03-2020</code><br>
+This generates a pdf containing the above-mentioned insights made on the consumption of  Food by the user, on 27th of March 2020.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.8. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.12. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
+<p>Clears all entries from the Food Record.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.9. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.13. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
@@ -366,30 +587,43 @@ Format: <code>exit</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
-</li>
-<li>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
+<p><strong>Update</strong> : <code>update n/NAME cal/CALORIES [p/PROTEINS] [p/PROTEINS] [c/CARBS] [f/FATS]</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p><strong>Delete</strong> : <code>delete n/NAME</code><br>
+e.g. <code>delete pizza</code></p>
 </li>
 <li>
 <p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code> <strong>OR</strong> <code>find [cal/CALORIES] [p/PROTEINS] [c/CARBS] [f/FATS]</code><br>
-e.g. <code>find strawberr jam</code> <strong>OR</strong><br>
+e.g. <code>find strawberry jam</code> <strong>OR</strong><br>
 <code>find cal/100 f/10</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list</code></p>
 </li>
 <li>
-<p><strong>Export</strong> : <code>export</code> <strong>OR</strong> <code>export C:\Users\eugen\OneDrive\Desktop\</code></p>
+<p><strong>Stomach</strong> : stomach [d/DATE]<br>
+eg. <code>stomach d/</code> <strong>OR</strong> <code>stomach d/2020-03-04</code></p>
+</li>
+<li>
+<p><strong>Nom</strong> : nom [n/NAME] [d/DATE] [portion/PORTION]<br>
+eg. <code>nom n/chicken d/2020-03-04 portion/1.5</code> <strong>OR</strong> <code>nom n/chicken d/ portion/</code></p>
+</li>
+<li>
+<p><strong>Vomit</strong> : <code>vomit [index/INDEX_OF_FOOD] [d/DATE] [portion/PORTION]</code><br>
+eg. <code>vomit num/1 d/2020-03-04 portion/3</code> <strong>OR</strong> <code>num/2 d/ portion/</code></p>
+</li>
+<li>
+<p><strong>Export</strong> : <code>export</code> <strong>OR</strong> <code>export location /C:\Users\eugen\OneDrive\Desktop\</code></p>
+</li>
+<li>
+<p><strong>Goal</strong> : <code>goal [g/GOAL]</code></p>
+</li>
+<li>
+<p><strong>Report</strong> : <code>report [Date in dd-mm-yyyy]</code></p>
 </li>
 <li>
 <p><strong>Help</strong> : <code>help</code></p>
@@ -397,4 +631,4 @@ e.g. <code>find strawberr jam</code> <strong>OR</strong><br>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-04 04:10:46 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-11 02:33:03 UTC</div></div></div></body></html>
